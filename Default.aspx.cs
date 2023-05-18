@@ -18,12 +18,21 @@ namespace LaboratorioNo14
 
         protected void ButtonAgregarCancion_Click(object sender, EventArgs e)
         {
-            Cancion cancionNueva = new Cancion();
-            cancionNueva.NombreCancion = TextBoxNombreCancion.Text;
-            cancionNueva.Artista = TextBoxNombreArtista.Text;
-            cancionNueva.TiempoDuracion =TextBoxTiempoDuracion.Text;
+            Archivo archivo = new Archivo();
+            List<Album> albumes = archivo.Leer();
 
-            canciones.Add(cancionNueva);
+            if (albumes != null)
+            {
+                if ((TextBoxNombreCancion.Text != "") && (TextBoxNombreArtista.Text != "") && (TextBoxTiempoDuracion.Text != ""))
+                {
+                    Cancion cancionNueva = new Cancion();
+                    cancionNueva.NombreCancion = TextBoxNombreCancion.Text;
+                    cancionNueva.Artista = TextBoxNombreArtista.Text;
+                    cancionNueva.TiempoDuracion = TextBoxTiempoDuracion.Text;
+
+                    canciones.Add(cancionNueva);
+                }
+            }
         }
 
         protected void ButtonAgregarAlbum_Click(object sender, EventArgs e)
