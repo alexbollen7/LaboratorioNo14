@@ -1,0 +1,19 @@
+[
+  {
+    "TituloAlbum": "Because of the time",
+    "ArtistaAlbum": "Kings of Leon",
+    "Canciones": [
+      {
+        "NombreCancion": "Charmer",
+        "Artista": "Kings of Leon",
+        "TiempoDuracion": 3.5
+      },
+      {
+        "NombreCancion": "Black Thumbnail",
+        "Artista": "Kings of Leon",
+        "TiempoDuracion": 4.1
+      }
+    ],
+    "FechaPublicacion": "12/08/2018"
+  }
+]
